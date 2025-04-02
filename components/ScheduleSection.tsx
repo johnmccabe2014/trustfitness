@@ -72,7 +72,7 @@ export default function ScheduleSection() {
           </Carousel>
         </div>
 
-        <AnimatedDivider />
+        <AnimatedDivider type="pulse" />
       </section>
     </RevealOnScroll>
   );

@@ -34,7 +34,7 @@ export default function AnimatedDivider({ type = 'line', flip = false }: Animate
   if (type === 'shimmer') {
     return (
       <motion.div
-        className="w-full h-[2px] my-12 bg-gradient-to-r from-transparent via-white to-transparent bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]"
+        className="divider-shimmer"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
@@ -54,9 +54,9 @@ export default function AnimatedDivider({ type = 'line', flip = false }: Animate
 
   if (type === 'dots') {
     return (
-      <div className="relative w-full h-[2px] bg-white/20 my-12 overflow-hidden">
+      <div className="divider-dots">
         <motion.div
-          className="absolute left-0 w-3 h-3 bg-white rounded-full"
+          className="absolute w-2 h-2 bg-white rounded-full top-[-4px]"
           animate={{ x: ['0%', '100%'] }}
           transition={{ repeat: Infinity, duration: 2, ease: 'linear' }}
         />
@@ -74,7 +74,7 @@ export default function AnimatedDivider({ type = 'line', flip = false }: Animate
       viewport={{ once: true }}
       style={{ transformOrigin: 'center' }}
     >
-      <div className="w-1/2 h-[4px] bg-white rounded-full" />
+      <div className="divider-line" />
     </motion.div>
   );
 }

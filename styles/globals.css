@@ -15,7 +15,7 @@ body {
   text-align: center;
 }
 
-/* Fade in from below */
+/* Fade in */
 @keyframes fade-in-up {
   from {
     opacity: 0;
@@ -30,7 +30,7 @@ body {
   animation: fade-in-up 0.8s ease-out both;
 }
 
-/* Slide animation */
+/* Slide (used in dividers) */
 @keyframes slide {
   0% {
     transform: translateX(-100%);
@@ -41,6 +41,36 @@ body {
 }
 .animate-slide {
   animation: slide 2s linear infinite;
+}
+
+/* Shimmer for dividers */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Dot animation for divider */
+@keyframes move-dot {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+/* Divider pulse animation */
+@keyframes pulse-divider {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 /* Form inputs */
@@ -61,74 +91,118 @@ form button[type="submit"] {
     transition-all duration-300 ease-in-out hover:shadow-xl;
 }
 
-/* Animated divider */
-.animated-divider {
-  position: relative;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, white, transparent);
-  opacity: 0.15;
-  margin: 3rem 0;
-  overflow: hidden;
-}
-
-.animated-divider::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -50%;
-  height: 100%;
-  width: 50%;
-  background: linear-gradient(to right, transparent, #fff, transparent);
-  animation: slide 2s linear infinite;
-}
-
 /* WhatsApp Floating Button */
 .floating-whatsapp-button {
   position: fixed;
   bottom: 1.5rem;
   right: 1.5rem;
   z-index: 50;
-  background-color: transparent;
-  padding: 0;
+  background-color: white;
+  padding: 0.5rem 1rem;
   border-radius: 9999px;
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
 }
-
 .floating-whatsapp-button img {
-  width: 40px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
   object-fit: contain;
   transition: transform 0.3s;
 }
-
 .floating-whatsapp-button:hover img {
   transform: scale(1.1);
 }
 
-/* Schedule cards responsive layout */
-.schedule-card {
-  @apply bg-white/10 rounded-xl shadow p-4 mb-6 text-left;
-}
-.schedule-card h3 {
-  @apply text-lg md:text-xl font-semibold text-white mb-4 border-b border-white/10 pb-2;
-}
-.schedule-card li {
-  @apply flex items-center justify-between bg-white/5 px-4 py-3 rounded-lg;
+/* Animated Divider Styles (used by AnimatedDivider.tsx) */
+.divider-line {
+  height: 4px;
+  width: 50%;
+  background-color: white;
+  border-radius: 9999px;
 }
 
+.divider-shimmer {
+  background: linear-gradient(90deg, transparent, white, transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s linear infinite;
+  height: 2px;
+  margin: 3rem 0;
+}
 
+.divider-dots {
+  position: relative;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.15);
+  overflow: hidden;
+  margin: 3rem 0;
+}
+.divider-dots::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+  animation: move-dot 2s linear infinite;
+}
 
-/* Center sections */
+/* Schedule Grid/Table */
+table {
+  border-collapse: collapse;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: 1200px;
+}
+
+th, td {
+  padding: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  vertical-align: middle;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(13, 66, 74, 0.95);
+  backdrop-filter: blur(6px);
+}
+
+/* Color-coded classes */
+.hyrox-cell {
+  background-color: rgba(255, 99, 99, 0.15); /* Soft red */
+}
+.bootcamp-cell {
+  background-color: rgba(99, 255, 99, 0.15); /* Soft green */
+}
+
+/* Schedule grid layout */
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 768px) {
+  .schedule-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Center all section content */
 section,
 h1, h2, h3, h4, h5, h6,
 p, div {
   text-align: center;
 }
 
-/* Instagram style */
+/* Instagram link */
 .instagram-link {
   color: white;
   display: inline-flex;
@@ -142,43 +216,76 @@ p, div {
 }
 
 
-/* Consistent contact input styling */
-.contact-input {
+.divider-line {
+  width: 50%;
+  height: 6px;
+  background-color: white;
+  border-radius: 9999px;
+}
+
+.divider-shimmer {
   width: 100%;
+  height: 2px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  background: linear-gradient(to right, transparent, white, transparent);
+  background-size: 200% 100%;
+  animation: shimmer 10s linear infinite;
+}
+
+.divider-dots {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 3rem 0;
+  overflow: hidden;
+}
+
+/* Consistent contact input styling */
+.contact-input,
+.contact-textarea,
+.contact-submit {
+  width: 100%;
+  max-width: 100%; /* Ensure it doesn't overflow container */
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   background-color: rgba(255, 255, 255, 0.05);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  placeholder-color: rgba(255, 255, 255, 0.6);
+  font-size: 1rem;
   transition: all 0.3s ease;
 }
 
-.contact-input:focus {
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
   outline: none;
   ring: 2px solid #4ade80; /* green-400 */
   border-color: #4ade80;
 }
 
-/* Sticky headers */
-thead th {
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background-color: rgba(13, 66, 74, 0.95);
-  backdrop-filter: blur(6px);
-}
-table {
-  border-collapse: collapse;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+/* For textarea specifically */
+.contact-textarea {
+  resize: vertical;
+  min-height: 120px;
 }
 
-th, td {
-  border: 1px solid rgba(255, 255, 255, 0.1);
+/* Submit button styling */
+.contact-submit {
+  background-color: #22c55e; /* Tailwind green-500 */
+  font-weight: 600;
+  color: white;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
-.schedule-table {
-  margin-left: auto;
-  margin-right: auto;
+
+.contact-submit:hover {
+  background-color: #16a34a; /* Tailwind green-600 */
+  transform: scale(1.02);
 }
