@@ -25,15 +25,15 @@ export default function ClassesSection() {
           interval={4000}
         >
           <div>
-            <img src="/gallery/class1.avif" alt="Bootcamp in action" />
+            <img src="/gallery/class1.jpeg" alt="Bootcamp in action" />
             <p className="legend">PTp</p>
           </div>
           <div>
-            <img src="/gallery/class1.avif" alt="Hyrox training" />
+            <img src="/gallery/class2.jpeg" alt="Hyrox training" />
             <p className="legend">Hyrox Strength & Conditioning</p>
           </div>
           <div>
-            <img src="/gallery/class1.avif" alt="Group session" />
+            <img src="/gallery/class3.jpeg" alt="Group session" />
             <p className="legend">Bootcamp</p>
           </div>
         </Carousel>

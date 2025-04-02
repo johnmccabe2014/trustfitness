@@ -4,7 +4,15 @@ import AnimatedDivider from './AnimatedDivider';
 import RevealOnScroll from './RevealOnScroll';
 import WhatsAppButton from './WhatsAppButton';
 
+
+
 export default function MembershipSection() {
+  const handleClick = () => {
+    window.open(
+      'https://goteamup.com/p/6436144-trust-fitness/memberships/162823/',
+      '_blank'
+    );
+  }
   return (
     <RevealOnScroll>
       <div className="w-full max-w-4xl mx-auto px-4 text-center">
@@ -20,6 +28,13 @@ export default function MembershipSection() {
           <p className="mb-4 text-white/80">
             Gain access to <strong>3 Bootcamp sessions per week</strong>. Perfect for those looking to stay consistent and build strength.
           </p>
+          <button
+            onClick={handleClick}
+            className="bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-full transition"
+          >
+            Sure you want a membership? Click here
+          </button>
+
           
         </div>
 
