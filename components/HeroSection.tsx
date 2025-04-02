@@ -9,6 +9,7 @@ export default function HeroSection() {
   };
 
   return (
+    <div className="w-full max-w-4xl mx-auto px-4 text-center">
     <section className="relative w-full min-h-screen bg-[#0D424A] text-white text-center px-4 md:px-12 flex flex-col justify-center items-center overflow-hidden">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-[#0D424A]/70 to-black/50 z-0" />
@@ -34,5 +35,6 @@ export default function HeroSection() {
 
       <AnimatedDivider />
     </section>
+    </div>
   );
 }

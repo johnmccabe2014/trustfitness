@@ -37,6 +37,7 @@ export default function ScheduleSection() {
 
   return (
     <RevealOnScroll>
+      <div className="w-full max-w-4xl mx-auto px-4 text-center">
       <section className="py-16 px-4 md:px-12 animate-fade-in-up">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Weekly Schedule</h2>
         <p className="mb-8 text-white/80 text-center max-w-2xl mx-auto">
@@ -85,6 +86,7 @@ export default function ScheduleSection() {
 
         <AnimatedDivider label="Book Your Slot" />
       </section>
+      </div>
     </RevealOnScroll>
   );
 }

@@ -7,6 +7,7 @@ import WhatsAppButton from './WhatsAppButton';
 export default function MembershipSection() {
   return (
     <RevealOnScroll>
+      <div className="w-full max-w-4xl mx-auto px-4 text-center">
     <section className="py-16 px-4 md:px-12 text-center animate-fade-in-up">
       <h2 className="text-3xl md:text-4xl font-bold mb-6">Membership Options</h2>
       <p className="mb-8 max-w-2xl mx-auto">
@@ -35,6 +36,7 @@ export default function MembershipSection() {
 
       <AnimatedDivider />
     </section>
+    </div>
     </RevealOnScroll>
   );
 }
