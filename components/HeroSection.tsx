@@ -33,7 +33,7 @@ export default function HeroSection() {
         </button>
       </div>
 
-      <AnimatedDivider />
+      <AnimatedDivider type='shimmer' />
     </section>
     </div>
   );

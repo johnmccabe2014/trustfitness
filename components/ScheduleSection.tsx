@@ -84,7 +84,7 @@ export default function ScheduleSection() {
           </table>
         </div>
 
-        <AnimatedDivider label="Book Your Slot" />
+        <AnimatedDivider type="shimmer" />
       </section>
       </div>
     </RevealOnScroll>

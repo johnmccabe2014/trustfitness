@@ -1,23 +1,80 @@
+'use client';
+
+import { motion } from 'framer-motion';
+
 interface AnimatedDividerProps {
-  label?: string;
+  type?: 'wave' | 'line' | 'shimmer' | 'pulse' | 'dots';
+  flip?: boolean;
 }
 
-export default function AnimatedDivider({ label }: AnimatedDividerProps) {
+export default function AnimatedDivider({ type = 'line', flip = false }: AnimatedDividerProps) {
+  if (type === 'wave') {
+    return (
+      <motion.div
+        initial={{ y: 40, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.6 }}
+        viewport={{ once: true }}
+        className="-mt-1 overflow-hidden"
+      >
+        <svg
+          viewBox="0 0 1440 120"
+          className={`w-full h-16 ${flip ? 'rotate-180' : ''} text-white`}
+          preserveAspectRatio="none"
+        >
+          <path
+            fill="currentColor"
+            d="M0,64L60,74.7C120,85,240,107,360,117.3C480,128,600,128,720,117.3C840,107,960,85,1080,74.7C1200,64,1320,64,1380,64L1440,64L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+          />
+        </svg>
+      </motion.div>
+    );
+  }
+
+  if (type === 'shimmer') {
+    return (
+      <motion.div
+        className="w-full h-[2px] my-12 bg-gradient-to-r from-transparent via-white to-transparent bg-[length:200%_100%] animate-[shimmer_2s_linear_infinite]"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+      />
+    );
+  }
+
+  if (type === 'pulse') {
+    return (
+      <motion.div
+        className="w-full border-t border-dashed border-white/40 my-12"
+        animate={{ opacity: [0.5, 1, 0.5] }}
+        transition={{ repeat: Infinity, duration: 2 }}
+      />
+    );
+  }
+
+  if (type === 'dots') {
+    return (
+      <div className="relative w-full h-[2px] bg-white/20 my-12 overflow-hidden">
+        <motion.div
+          className="absolute left-0 w-3 h-3 bg-white rounded-full"
+          animate={{ x: ['0%', '100%'] }}
+          transition={{ repeat: Infinity, duration: 2, ease: 'linear' }}
+        />
+      </div>
+    );
+  }
+
+  // Default: simple expanding line
   return (
-    <div className="w-full flex items-center justify-center my-12 gap-4">
-      <div className="relative flex-1 h-[2px] bg-white/20 overflow-hidden">
-        <div className="absolute top-0 left-[-50%] w-[200%] h-full animate-slide bg-gradient-to-r from-transparent via-white to-transparent" />
-      </div>
-
-      {label && (
-        <span className="text-white text-sm md:text-base font-semibold tracking-wide whitespace-nowrap uppercase opacity-80">
-          {label}
-        </span>
-      )}
-
-      <div className="relative flex-1 h-[2px] bg-white/20 overflow-hidden">
-        <div className="absolute top-0 left-[-50%] w-[200%] h-full animate-slide bg-gradient-to-r from-transparent via-white to-transparent" />
-      </div>
-    </div>
+    <motion.div
+      className="w-full flex justify-center my-12"
+      initial={{ scaleX: 0, opacity: 0 }}
+      whileInView={{ scaleX: 1, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      style={{ transformOrigin: 'center' }}
+    >
+      <div className="w-1/2 h-[4px] bg-white rounded-full" />
+    </motion.div>
   );
 }

@@ -34,7 +34,7 @@ export default function MembershipSection() {
         
       </div>
 
-      <AnimatedDivider />
+      <AnimatedDivider type='shimmer' />
     </section>
     </div>
     </RevealOnScroll>

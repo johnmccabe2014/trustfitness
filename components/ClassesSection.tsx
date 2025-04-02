@@ -39,7 +39,7 @@ export default function ClassesSection() {
         </Carousel>
       </div>
 
-      <AnimatedDivider />
+      <AnimatedDivider type='shimmer' />
     </section>
     </RevealOnScroll>
   );

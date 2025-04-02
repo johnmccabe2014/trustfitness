@@ -65,7 +65,7 @@ export default function ContactSection() {
           </form>
         </div>
 
-        <AnimatedDivider />
+        <AnimatedDivider type='shimmer'/>
       </section>
     </RevealOnScroll>
   );

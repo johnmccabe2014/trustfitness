@@ -28,7 +28,7 @@ export default function LocationSection() {
 
       <p className="mt-4 text-white/70">1 Emmet Street, Mountmellick, Laois, R32 XW62</p>
 
-      <AnimatedDivider />
+      <AnimatedDivider type='shimmer'/>
     </section>
     </div>
     </RevealOnScroll>
