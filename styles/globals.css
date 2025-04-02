@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* General styles */
+body {
+  background-color: #0D424A;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Fade in from below */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out both;
+}
+
+/* Slide animation */
+@keyframes slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.animate-slide {
+  animation: slide 2s linear infinite;
+}
+
+/* Form inputs */
+input[type="text"],
+input[type="email"],
+textarea {
+  @apply w-full px-4 py-3 rounded-lg bg-white/10 text-white placeholder-white/60 border border-white/20 
+    focus:outline-none focus:ring-2 focus:ring-green-400 transition-all duration-200;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button[type="submit"] {
+  @apply bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-6 rounded-full shadow-lg
+    transition-all duration-300 ease-in-out hover:shadow-xl;
+}
+
+/* Animated divider */
+.animated-divider {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, white, transparent);
+  opacity: 0.15;
+  margin: 3rem 0;
+  overflow: hidden;
+}
+
+.animated-divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(to right, transparent, #fff, transparent);
+  animation: slide 2s linear infinite;
+}
+
+/* WhatsApp Floating Button */
+.floating-whatsapp-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 50;
+  background-color: transparent;
+  padding: 0;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.floating-whatsapp-button img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.floating-whatsapp-button:hover img {
+  transform: scale(1.1);
+}
+
+/* Schedule cards responsive layout */
+.schedule-card {
+  @apply bg-white/10 rounded-xl shadow p-4 mb-6 text-left;
+}
+.schedule-card h3 {
+  @apply text-lg md:text-xl font-semibold text-white mb-4 border-b border-white/10 pb-2;
+}
+.schedule-card li {
+  @apply flex items-center justify-between bg-white/5 px-4 py-3 rounded-lg;
+}
+
+
+
+/* Center sections */
+section,
+h1, h2, h3, h4, h5, h6,
+p, div {
+  text-align: center;
+}
+
+/* Instagram style */
+.instagram-link {
+  color: white;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.instagram-link:hover {
+  color: #E1306C;
+}
+
+
+/* Consistent contact input styling */
+.contact-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  placeholder-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+  outline: none;
+  ring: 2px solid #4ade80; /* green-400 */
+  border-color: #4ade80;
+}
+
+/* Sticky headers */
+thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(13, 66, 74, 0.95);
+  backdrop-filter: blur(6px);
+}
+table {
+  border-collapse: collapse;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th, td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.schedule-table {
+  margin-left: auto;
+  margin-right: auto;
+}

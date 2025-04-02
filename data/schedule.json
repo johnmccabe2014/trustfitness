@@ -1,0 +1,22 @@
+[
+    { "day": "Monday", "time": "06:30 AM", "name": "Bootcamp" },
+    { "day": "Monday", "time": "10:00 AM", "name": "Bootcamp" },
+    { "day": "Monday", "time": "06:00 PM", "name": "Bootcamp" },
+    { "day": "Monday", "time": "07:00 PM", "name": "Bootcamp" },
+    { "day": "Tuesday", "time": "10:00 AM", "name": "HYROX" },
+    { "day": "Tuesday", "time": "05:30 PM", "name": "HYROX" },
+    { "day": "Wednesday", "time": "06:30 AM", "name": "Bootcamp" },
+    { "day": "Wednesday", "time": "10:00 AM", "name": "Bootcamp" },
+    { "day": "Wednesday", "time": "06:00 PM", "name": "Bootcamp" },
+    { "day": "Wednesday", "time": "07:00 PM", "name": "Bootcamp" },
+    { "day": "Thursday", "time": "10:00 AM", "name": "HYROX" },
+    { "day": "Thursday", "time": "05:30 PM", "name": "HYROX" },
+    { "day": "Friday", "time": "06:30 AM", "name": "Bootcamp" },
+    { "day": "Friday", "time": "10:00 AM", "name": "Bootcamp" },
+    { "day": "Friday", "time": "06:00 PM", "name": "Bootcamp" },
+    { "day": "Friday", "time": "07:00 PM", "name": "Bootcamp" },
+    { "day": "Saturday", "time": "03:30 AM", "name": "HYROX" },
+    { "day": "Saturday", "time": "09:30 AM", "name": "Bootcamp" }
+    
+
+  ]
