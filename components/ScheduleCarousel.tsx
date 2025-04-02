@@ -88,7 +88,7 @@ export default function ScheduleCarousel() {
           </Carousel>
         </div>
 
-        <AnimatedDivider label="Book Your Spot" />
+        <AnimatedDivider />
       </section>
     </RevealOnScroll>
   );
