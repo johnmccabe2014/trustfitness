@@ -9,7 +9,7 @@ import RevealOnScroll from './RevealOnScroll';
 export default function ClassesSection() {
   return (
     <RevealOnScroll>
-    <section className="py-16 px-4 md:px-12 text-center animate-fade-in-up">
+    <section id="classes" className="py-16 px-4 md:px-12 text-center animate-fade-in-up">
       <h2 className="text-3xl md:text-4xl font-bold mb-6">What to Expect</h2>
       <p className="mb-8 max-w-3xl mx-auto">
         Experience high-energy bootcamps, tailored Hyrox sessions, and expert coaching that pushes you to your best.

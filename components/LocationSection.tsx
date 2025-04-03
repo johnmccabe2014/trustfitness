@@ -7,7 +7,7 @@ export default function LocationSection() {
   return (
     <RevealOnScroll>
       <div className="w-full max-w-4xl mx-auto px-4 text-center">
-    <section className="py-16 px-4 md:px-12 text-center animate-fade-in-up">
+    <section id="location" className="py-16 px-4 md:px-12 text-center animate-fade-in-up">
       <h2 className="text-3xl md:text-4xl font-bold mb-6">Where to Find Us</h2>
       <p className="mb-6 text-white/80 max-w-xl mx-auto">
         Visit Trust Fitness in the heart of Mountmellick for your next training session. Easy to access, with parking available.

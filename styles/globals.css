@@ -289,3 +289,31 @@ p, div {
   background-color: #16a34a; /* Tailwind green-600 */
   transform: scale(1.02);
 }
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  @apply px-4 py-2 rounded-full font-semibold transition-colors duration-300;
+}
+
+.nav-link-inactive {
+  @apply bg-white/20 text-white hover:bg-green-600/70;
+}
+
+.nav-link-active {
+  @apply bg-green-500 text-white;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}

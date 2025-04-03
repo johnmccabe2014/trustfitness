@@ -16,7 +16,7 @@ export default function MembershipSection() {
   return (
     <RevealOnScroll>
       <div className="w-full max-w-4xl mx-auto px-4 text-center">
-    <section className="py-16 px-4 md:px-12 text-center animate-fade-in-up">
+    <section id="membership" className="py-16 px-4 md:px-12 text-center animate-fade-in-up">
       <h2 className="text-3xl md:text-4xl font-bold mb-6">Membership Options</h2>
       <p className="mb-8 max-w-2xl mx-auto">
         Choose the plan that suits your goals and lifestyle. Each membership gives you access to expert-led sessions and our vibrant fitness community.

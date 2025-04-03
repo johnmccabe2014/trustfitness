@@ -31,7 +31,7 @@ const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
 export default function ScheduleSection() {
   return (
     <RevealOnScroll>
-      <section className="py-16 px-4 md:px-12 animate-fade-in-up">
+      <section id="schedule" className="py-16 px-4 md:px-12 animate-fade-in-up">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">Weekly Schedule</h2>
         <p className="mb-8 max-w-xl mx-auto text-center">
           Scroll through the week and check out what sessions suit you best.
