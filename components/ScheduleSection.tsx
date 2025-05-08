@@ -22,7 +22,7 @@ const schedule = [
   { day: 'Friday', time: '10:00 AM', name: 'Bootcamp' },
   { day: 'Friday', time: '06:00 PM', name: 'Bootcamp' },
   { day: 'Friday', time: '07:00 PM', name: 'Bootcamp' },
-  { day: 'Saturday', time: '03:30 AM', name: 'HYROX' },
+  { day: 'Saturday', time: '08:30 AM', name: 'HYROX' },
   { day: 'Saturday', time: '09:30 AM', name: 'Bootcamp' },
 ];
 
