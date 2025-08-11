@@ -12,7 +12,7 @@ export default function ClassesSection() {
     <section id="classes" className="py-16 px-4 md:px-12 text-center animate-fade-in-up">
       <h2 className="text-3xl md:text-4xl font-bold mb-6">What to Expect</h2>
       <p className="mb-8 max-w-3xl mx-auto">
-        Experience high-energy bootcamps, tailored Hyrox sessions, and expert coaching that pushes you to your best.
+        Experience high-energy bootcamps, our intense Revelate sessions, our tailored Hyrox sessions, and expert coaching that pushes you to your best.
       </p>
 
       <div className="max-w-4xl mx-auto mb-8 rounded-xl overflow-hidden shadow-xl">
@@ -25,8 +25,8 @@ export default function ClassesSection() {
           interval={4000}
         >
           <div>
-            <img src="/gallery/class1.jpeg" alt="Bootcamp in action" />
-            <p className="legend">PTp</p>
+            <img src="/gallery/class1.jpeg" alt="Revelate in action" />
+            <p className="legend">Revelate</p>
           </div>
           <div>
             <img src="/gallery/class2.jpeg" alt="Hyrox training" />

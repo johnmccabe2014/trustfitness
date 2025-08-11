@@ -26,7 +26,7 @@ export default function MembershipSection() {
         <div className="bg-white/5 backdrop-blur-md p-6 rounded-xl border border-white/10 shadow-md hover:shadow-lg transition-all">
           <h3 className="text-2xl font-semibold mb-2">Standard Membership</h3>
           <p className="mb-4 text-white/80">
-            Gain access to <strong>3 Bootcamp sessions per week</strong>. Perfect for those looking to stay consistent and build strength.
+            Gain access to <strong>All of our Bootcamp sessions and Revelate each week</strong>. Perfect for those looking to stay consistent and build strength.
           </p>
           <button
             onClick={handleClick}
